@@ -22,13 +22,13 @@ const Banner = ({ netflixOriginals }: Props) => {
     );
   }, [netflixOriginals]);
 
-  // const truncateString = (str, length) => {
-  //   if (str?.length > length) {
-  //     return str.slice(0, length) + '...';
-  //   } else {
-  //     return str;
-  //   }
-  // };
+  const truncateString = (str = '', length = 150) => {
+    if (str?.length > length) {
+      return str.slice(0, length) + '...';
+    } else {
+      return str;
+    }
+  };
 
   return (
     <div
@@ -58,9 +58,9 @@ const Banner = ({ netflixOriginals }: Props) => {
           className='bannerButton bg-[gray]/70'>
           More Info <InformationCircleIcon className='h-5 w-5 md:h-8 md:w-8' />
         </button>
-        {/* <p className='max-w-xs text-shadow-md text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl'>
+        <p className='max-w-xs text-shadow-md text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl'>
           {truncateString(movie?.overview, 150)}
-        </p> */}
+        </p>
       </div>
     </div>
   );
