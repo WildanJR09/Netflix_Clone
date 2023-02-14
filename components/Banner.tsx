@@ -22,6 +22,14 @@ const Banner = ({ netflixOriginals }: Props) => {
     );
   }, [netflixOriginals]);
 
+  // const truncateString = (str, length) => {
+  //   if (str?.length > length) {
+  //     return str.slice(0, length) + '...';
+  //   } else {
+  //     return str;
+  //   }
+  // };
+
   return (
     <div
       className='flex flex-col space-y-2 py-16 md:space-y-4 
@@ -36,9 +44,6 @@ const Banner = ({ netflixOriginals }: Props) => {
       <h1 className='text-2xl font-bold md:text-4xl lg:text-7xl'>
         {movie?.title || movie?.name || movie?.original_name}
       </h1>
-      {/* <p className='max-w-xs text-shadow-md text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl'>
-        {movie?.overview}
-      </p> */}
 
       <div className='flex space-x-3'>
         <button className='bannerButton bg-white text-black'>
@@ -53,6 +58,9 @@ const Banner = ({ netflixOriginals }: Props) => {
           className='bannerButton bg-[gray]/70'>
           More Info <InformationCircleIcon className='h-5 w-5 md:h-8 md:w-8' />
         </button>
+        {/* <p className='max-w-xs text-shadow-md text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl'>
+          {truncateString(movie?.overview, 150)}
+        </p> */}
       </div>
     </div>
   );
