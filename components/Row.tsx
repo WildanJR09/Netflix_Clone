@@ -9,6 +9,7 @@ interface Props {
 }
 
 const Row = ({ title, movies }: Props) => {
+  const [movie, setMovie] = useState<Movie | null>(null);
   const rowRef = useRef<HTMLDivElement>(null);
   const [isMoved, setIsMoved] = useState<boolean>(false);
 
@@ -34,7 +35,7 @@ const Row = ({ title, movies }: Props) => {
       text-[#e5e5e5e5] transition duration-200 hover:text-white
       md:text-2xl
       '>
-        {title}
+        {movie?.title || movie?.name || movie?.original_name}
       </h2>
       <div className='group relative md:-ml-2'>
         <ChevronLeftIcon
