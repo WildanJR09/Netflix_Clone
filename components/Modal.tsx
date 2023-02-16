@@ -19,8 +19,7 @@ const Modal = () => {
   useEffect(() => {
     async function fetchMovie() {
       const data = await fetch(`
-        https://api.themoviedb.org/3/${
-          movie?.media_type === "tv" ? "tv" : "movie"
+        https://api.themoviedb.org/3/${movie?.media_type === "tv" ? "tv" : "movie"
         }/${movie?.id}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&
       language=en-US&append_to_response=videos
       `)
@@ -108,6 +107,9 @@ const Modal = () => {
         '>
           <div className='space-y-6 text-lg'>
             <div className='flex items-center space-x-2 text-sm'>
+              <h2 className='font-bold'>
+                {movie?.title || movie?.name || movie?.original_name}
+              </h2>
               <p className='font-semibold text-green-400'>
                 {movie?.vote_average * 10} % Match
               </p>
