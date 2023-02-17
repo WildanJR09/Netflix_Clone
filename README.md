@@ -1,5 +1,7 @@
 ![preview](https://github.com/WildanJR09/.github/blob/main/netflix-clone.png?raw=true)
 
+<h1 align="center">uWill - Netflix_Clone</h1>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
