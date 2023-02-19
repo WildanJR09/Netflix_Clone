@@ -106,10 +106,10 @@ const Modal = () => {
         px-10 py-8
         '>
           <div className='space-y-6 text-lg'>
+            <h2 className='font-bold text-xl'>
+              {movie?.title || movie?.name || movie?.original_name}
+            </h2>
             <div className='flex items-center space-x-2 text-sm'>
-              <h2 className='font-bold'>
-                {movie?.title || movie?.name || movie?.original_name}
-              </h2>
               <p className='font-semibold text-green-400'>
                 {movie?.vote_average * 10} % Match
               </p>
