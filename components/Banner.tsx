@@ -59,7 +59,7 @@ const Banner = ({ netflixOriginals }: Props) => {
           More Info <InformationCircleIcon className='h-5 w-5 md:h-8 md:w-8' />
         </button>
       </div>
-      <p className='max-w-xs text-shadow-md text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl'>
+      <p className='w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-200'>
         {truncateString(movie?.overview, 150)}
       </p>
     </div>
